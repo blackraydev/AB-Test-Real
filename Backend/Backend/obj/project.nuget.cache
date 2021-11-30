@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "s6GjMi1obeZabblaw48eTXRyEoYanmypWtMS0LKMYTuJPHNVp7R0k/gcGtlw+uCaB8XjGlhKgPsLE113vv8gpg==",
+  "success": true,
+  "projectFilePath": "/Applications/MyFiles/Development/Web/Test tasks/AB-Test-Real/Backend/Backend/Backend.csproj",
+  "expectedPackageFiles": [
+    "/Users/ramilsagidullin/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/ramilsagidullin/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/ramilsagidullin/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/Users/ramilsagidullin/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/Users/ramilsagidullin/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/Users/ramilsagidullin/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
