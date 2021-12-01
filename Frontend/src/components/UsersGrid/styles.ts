@@ -33,11 +33,18 @@ export const GridDataWrapper = styled.div`
   min-height: 354px;
   max-height: 354px;
   background: ${Colors.WHITE};
-  border-radius: 10px;
 
   -ms-overflow-style: none;
 
   &::-webkit-scrollbar {
     display: none;
   }
+`;
+
+export const LoadingSpinnerWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 `;

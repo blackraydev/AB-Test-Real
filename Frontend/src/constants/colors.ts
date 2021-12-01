@@ -8,4 +8,6 @@ export enum Colors {
   BUTTON_DISABLED = 'rgba(74, 157, 255, 0.27)',
   CELL_HOVER = 'rgb(235, 235, 240)',
   LIGHT_TEXT = 'rgba(93, 109, 151, 0.5)',
+  RED = 'red',
+  LIGHT_RED = 'rgb(251, 172, 168)',
 }

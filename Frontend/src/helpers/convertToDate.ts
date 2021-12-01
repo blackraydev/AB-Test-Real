@@ -1,9 +1,12 @@
 export const convertToDate = (value: string): string => {
-  if (!value.length) return '';
+  const date: Date = new Date(value);
 
-  if (value.length === 2 || value.length === 5) {
-    value += '.';
-  }
+  let days: string = date.getDate().toString();
+  let month: string = (date.getMonth() + 1).toString();
+  let years: number = date.getFullYear();
 
-  return value;
+  if (days.length === 1) days = '0' + days;
+  if (month.length === 1) month = '0' + month;
+
+  return `${days}.${month}.${years}`;
 };
