@@ -27,17 +27,5 @@ namespace Backend.Controllers {
 
             return Ok(response);
         }
-
-        [HttpGet("calculate")]
-        public ActionResult<double> CalculateRollingRetention7Day() {
-            var response = _userServices.CalculateRollingRetention7Day();
-            return Ok(response);
-        }
-        
-        [HttpGet("lifetime")]
-        public ActionResult<List<double>> GetUsersLifeTime() {
-            var response = _userServices.GetUsersLifeTime();
-            return Ok(response);
-        }
     }
 }

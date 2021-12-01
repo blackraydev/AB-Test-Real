@@ -30,13 +30,14 @@ namespace Backend {
             services.AddDbContext<AppDbContext>(options => options.UseNpgsql(Configuration.GetConnectionString("Default")));
             services.AddCors(options => 
                 options.AddPolicy("Policy", builder =>
-                    builder.WithOrigins("http://localhost:3000")
+                    builder.WithOrigins("https://blackraydev.github.io")
                         .AllowAnyHeader()
                         .AllowAnyMethod()
                         .AllowCredentials()
                 )
             );
             services.AddTransient<IUserServices, UserServices>();
+            services.AddTransient<IMetricsServices, MetricsServices>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {

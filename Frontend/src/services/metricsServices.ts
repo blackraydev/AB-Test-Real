@@ -3,11 +3,11 @@ import { API_URL } from '../constants/apiUrl';
 
 class MetricsServices {
   static async getUsersLifeTime(): Promise<AxiosResponse<void>> {
-    return await axios.get(`${API_URL}/users/lifetime`);
+    return await axios.get(`${API_URL}/metrics/lifetime`);
   }
 
   static async getRollingRetention(): Promise<AxiosResponse<void>> {
-    return await axios.get(`${API_URL}/users/calculate`);
+    return await axios.get(`${API_URL}/metrics/calculate`);
   }
 }
 

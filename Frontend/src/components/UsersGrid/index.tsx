@@ -75,7 +75,7 @@ const UsersGrid: React.FC<IUsersGrid> = ({ users, isLoading, setSelectedUser }) 
           )}
         </UI.GridDataWrapper>
       </UI.Grid>
-      <Button value="Add new user" onClick={addNewUserHandler} />
+      <Button value="Add new user" onClick={addNewUserHandler} disabled={isLoading} />
     </UI.GridWrapper>
   );
 };
