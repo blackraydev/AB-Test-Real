@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Colors } from '../../constants/colors';
 
 export const GridWrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -47,4 +48,10 @@ export const LoadingSpinnerWrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
+`;
+
+export const ErrorText = styled.p`
+  position: absolute;
+  color: red;
+  top: -35px;
 `;

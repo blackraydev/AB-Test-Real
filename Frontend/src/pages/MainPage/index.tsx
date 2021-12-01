@@ -5,19 +5,24 @@ import { Colors } from '../../constants/colors';
 import { useActions } from '../../hooks/useActions';
 import { usePrevious } from '../../hooks/usePrevious';
 import { receiveData } from '../../store/Users/actions';
-import { usersLoadingSelector, usersSelector } from '../../store/Users/selectors';
+import { usersErrorSelector, usersLoadingSelector, usersSelector } from '../../store/Users/selectors';
 import RollingRetentionModal from '../../components/RollingRetentionModal';
 import Button from '../../UI/Button';
 import * as UI from './styles';
 
 const MainPage: React.FC = () => {
   const { getUsers, saveUsers, calculateMetrics } = useActions();
+
+  const dispatch = useDispatch();
+
   const users = useSelector(usersSelector);
   const isLoading = useSelector(usersLoadingSelector);
+  const hasError = useSelector(usersErrorSelector);
+
   const [selectedUser, setSelectedUser] = useState<number>(-1);
-  const prevSelectedUser = usePrevious<number>(selectedUser);
   const [modalVisible, setModalVisible] = useState<boolean>(false);
-  const dispatch = useDispatch();
+
+  const prevSelectedUser = usePrevious<number>(selectedUser);
 
   useEffect(() => {
     getUsers();
@@ -48,9 +53,9 @@ const MainPage: React.FC = () => {
   return (
     <UI.PageWrapper>
       <UI.ContentWrapper>
-        <UsersGrid users={users} isLoading={isLoading} setSelectedUser={setSelectedUser} />
+        <UsersGrid users={users} isLoading={isLoading} hasError={hasError} setSelectedUser={setSelectedUser} />
         <UI.ButtonsWrapper>
-          <Button value="Save" onClick={saveDataHandler} />
+          <Button value="Save" onClick={saveDataHandler} disabled={hasError} />
           <Button
             value="Calculate"
             onClick={calculateDataHandler}

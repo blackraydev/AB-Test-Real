@@ -12,10 +12,11 @@ import * as UI from './styles';
 interface IUsersGrid {
   users: IUser[];
   isLoading: boolean;
+  hasError: boolean;
   setSelectedUser: Dispatch<SetStateAction<number>>;
 }
 
-const UsersGrid: React.FC<IUsersGrid> = ({ users, isLoading, setSelectedUser }) => {
+const UsersGrid: React.FC<IUsersGrid> = ({ users, isLoading, hasError, setSelectedUser }) => {
   const dispatch = useDispatch();
 
   const addNewUserHandler = () => {
@@ -35,6 +36,7 @@ const UsersGrid: React.FC<IUsersGrid> = ({ users, isLoading, setSelectedUser }) 
 
   return (
     <UI.GridWrapper>
+      {hasError && <UI.ErrorText>Error: There is no connection to the server!</UI.ErrorText>}
       <UI.Grid>
         <UI.GridRow>
           <GridCell value={'UserID'} header small />
