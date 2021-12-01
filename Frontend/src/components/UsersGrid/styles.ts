@@ -10,6 +10,7 @@ export const GridWrapper = styled.div`
 `;
 
 export const Grid = styled.div`
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
   background: ${Colors.WHITE};
