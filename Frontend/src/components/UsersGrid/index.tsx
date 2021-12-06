@@ -20,7 +20,7 @@ const UsersGrid: React.FC<IUsersGrid> = ({ users, isLoading, hasError, setSelect
   const dispatch = useDispatch();
 
   const addNewUserHandler = () => {
-    const lastUserId = users[users.length - 1].userId;
+    const lastUserId = users.length ? users[users.length - 1].userId : 0;
 
     const user: IUser = {
       userId: lastUserId + 1,
